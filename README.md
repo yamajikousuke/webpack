@@ -1,5 +1,5 @@
 # webpack
-モージュールバンドラーwebpackのひな型。テスト環境は、mocha+power assertです。
+モージュールバンドラーwebpackでワンランク上の開発ライフ。
 
 ## 内容
 * ES6表記をbabelでトランスパイル
@@ -43,9 +43,9 @@
     });
 
 * mochaについて  
-　https://mochajs.org/  
+https://mochajs.org/  
 * power assertについて  
-　https://github.com/power-assert-js/power-assert  
+https://github.com/power-assert-js/power-assert  
 
 ### 本番環境にアップするときは、
 * webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
