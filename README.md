@@ -9,12 +9,32 @@
 
 ## 使い方
 ### ビルド
-npm run build
-### サーバー起動
-npm run server
-### テスト
-npm run test
+* npm run build
+* /public/js配下にビルドされたbundle.jsが生成されます。
 
+### サーバー起動
+* npm run server
+* http://localhost:8080/　にアクセス
+
+### テスト
+* npm run test
+* /test配下のテストコードを実行します。
+    import assert from "assert";
+    import taxCalculator from "../src/js/modules/tax-calculator";
+    import additionCalculator from "../src/js/modules/addition-calculator";
+
+    describe("サンプル計算", () => {
+        it("tax-calculator", () => {
+            assert.equal(taxCalculator(1000, 1.08), 1080);
+        });
+        it("addition-calculator", () => {
+            assert.equal(additionCalculator(200, 200), 400);
+        });
+    });
+
+
+### 本番環境にアップするときは、
+* webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
 
 ## 参考URL
 http://system.blog.uuum.jp/entry/2016/09/16/110000
