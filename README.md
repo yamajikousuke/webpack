@@ -20,9 +20,10 @@
 * npm run test
 * /test配下のテストコード（ES6表記）を実行します。
 
-```import assert from "assert";```
-import taxCalculator from "../src/js/modules/tax-calculator";
-import additionCalculator from "../src/js/modules/addition-calculator";
+    ```import assert from "assert";
+
+    import taxCalculator from "../src/js/modules/tax-calculator";
+    import additionCalculator from "../src/js/modules/addition-calculator";
 
     describe("サンプル計算", () => {
         it("tax-calculator", () => {
