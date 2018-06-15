@@ -1,0 +1,16 @@
+npm installは、管理者権限で行うこと。
+
+npm install webpack -g
+npm init -y
+npm install webpack --save-dev
+npm install webpack-cli --save-dev
+webpackコマンド実行
+
+簡易サーバー
+http://localhost:8080/
+./node_modules/.bin/webpack-dev-server --hot --inline --content-base public/
+ 
+
+
+test
+mocha --require babel-core/register
