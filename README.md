@@ -14,11 +14,12 @@
 
 ### サーバー起動
 * npm run server
-* http://localhost:8080/　にアクセス
+* URLは、http://localhost:8080/
 
 ### テスト
 * npm run test
-* /test配下のテストコードを実行します。
+* /test配下のテストコード（ES6表記）を実行します。
+
     import assert from "assert";
     import taxCalculator from "../src/js/modules/tax-calculator";
     import additionCalculator from "../src/js/modules/addition-calculator";
