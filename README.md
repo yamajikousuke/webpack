@@ -6,22 +6,30 @@
 * 開発用サーバーwebpack-dev-server（LiveReloadします）
 * テスティングフレームワークは、mocha
 * アサーションは、power assert
+* デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
 
 ## 使い方
+### インストール
+* 管理者権限でGit Bash起動
+* npm install
+
+### ソースの配置
+* /src/js配下に開発コードを配置。app.jsがアプリ本体。
+* /src/js/modules配下に、モジュール化したソースを配置
+
 ### ビルド
-* npm run build
+* npm run build（webpackを実行）
 * /public/js配下にビルドされたbundle.jsが生成されます。
 
 ### サーバー起動
-* npm run server
+* npm run server（./node_modules/.bin/webpack-dev-server --hot --inline）
 * URLは、http://localhost:8080/
 
 ### テスト
-* npm run test
-* /test配下のテストコード（ES6表記）を実行します。
+* npm run test（mocha --require babel-core/register）
+* /test配下のテストコードを実行します。以下のようにES6表記もOK。
 
     ```import assert from "assert";
-
     import taxCalculator from "../src/js/modules/tax-calculator";
     import additionCalculator from "../src/js/modules/addition-calculator";
 
@@ -34,9 +42,14 @@
         });
     });
 
-
 ### 本番環境にアップするときは、
 * webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
 
 ## 参考URL
 http://system.blog.uuum.jp/entry/2016/09/16/110000
+https://qiita.com/chibi929/items/bf62556d042871c4a6c6
+https://qiita.com/soarflat/items/28bf799f7e0335b68186
+https://blog.mismithportfolio.com/web/20161104webpackrelease
+https://blog.unsweets.net/2016/03/webpack2.html
+https://ics.media/entry/17376
+
