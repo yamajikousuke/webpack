@@ -46,10 +46,10 @@
 * webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
 
 ## 参考URL
-http://system.blog.uuum.jp/entry/2016/09/16/110000
-https://qiita.com/chibi929/items/bf62556d042871c4a6c6
-https://qiita.com/soarflat/items/28bf799f7e0335b68186
-https://blog.mismithportfolio.com/web/20161104webpackrelease
-https://blog.unsweets.net/2016/03/webpack2.html
-https://ics.media/entry/17376
+http://system.blog.uuum.jp/entry/2016/09/16/110000  
+https://qiita.com/chibi929/items/bf62556d042871c4a6c6  
+https://qiita.com/soarflat/items/28bf799f7e0335b68186  
+https://blog.mismithportfolio.com/web/20161104webpackrelease  
+https://blog.unsweets.net/2016/03/webpack2.html  
+https://ics.media/entry/17376  
 
