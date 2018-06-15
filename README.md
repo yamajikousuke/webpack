@@ -27,7 +27,7 @@
 
 ### テスト
 * npm run test（mocha --require babel-core/register）
-* /test配下のテストコードを実行します。以下のようにES6表記もOK。
+* /test配下のテストコードを実行します。以下のようなES6表記もOK。
 
     ```import assert from "assert";
     import taxCalculator from "../src/js/modules/tax-calculator";
@@ -42,8 +42,14 @@
         });
     });
 
+* mochaについて  
+　https://mochajs.org/  
+* power assertについて  
+　https://github.com/power-assert-js/power-assert  
+
 ### 本番環境にアップするときは、
 * webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
+* /src/js/配下のソースファイルが、/public/js配下に結合＋ミニファイされて出力されます。(bundle.js)
 
 ## 参考URL
 http://system.blog.uuum.jp/entry/2016/09/16/110000  
