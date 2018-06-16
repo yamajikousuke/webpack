@@ -10,6 +10,32 @@
 なお、デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
 
 ## 使い方
+
+    ```/
+    │  .babelrc（babel設定ファイル）
+    │  .gitignore（Gitの設定ファイル）
+    │  package.json（NodeJSの設定ファイル）
+    │  README.md（ReadMe）
+    │  webpack.development.config.js（webpackの開発用ビルド設定）
+    │  webpack.production.config.js（webpackの本番用ビルド設定）
+    │
+    ├─public
+    │  │  index.html（開発サーバーのインデックス）
+    │  │
+    │  └─js
+    │          bundle.js（ビルドファイル）
+    │
+    ├─src
+    │  └─js
+    │      │  app.js（エントリーポイント）
+    │      │
+    │      └─modules（モジュール群を格納）
+    │              addition-calculator.js
+    │              tax-calculator.js
+    │
+    └─test（テストコードを格納）
+            test.js
+
 ### インストール
 * 管理者権限でGit Bash起動
 * ```npm install```を実行してください。
