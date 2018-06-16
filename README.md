@@ -1,8 +1,9 @@
 # webpack
-モージュールバンドラーwebpackでワンランク上の開発ライフ。
+モージュールバンドラーwebpackで、ワンランク上の開発ライフ。
+コードをモジュール化するから、テストも快適！
 
 ## 内容
-* JSのES6表記をbabelでトランスパイル
+* JSのES6表記を、babelでトランスパイル
 * 開発用サーバーは、webpack-dev-serverです。（LiveReloadします）
 * テスティングフレームワークは、mocha
 * アサーションは、power assert  
