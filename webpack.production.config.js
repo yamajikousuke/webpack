@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   // モードの設定、v4系以降はmodeを指定しないと、webpack実行時に警告が出る
   // 開発：development 本番：production
-  mode: 'development',
+  mode: 'production',
   // エントリーポイントの設定
   entry: './src/js/app.js',
   // 出力の設定
@@ -22,9 +22,6 @@ module.exports = {
       publicPath: '/js/',
       watchContentBase: true
   },
-  //ソースマップ
-  //開発環境ではcheap-module-eval-source-map、本番環境ではcheap-module-source-map
-  devtool: 'cheap-module-source-map',
   // ローダーの設定
   module: {
     rules: [

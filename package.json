@@ -1,5 +1,5 @@
 {
-  "name": "webpack_v4",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,7 @@
     "dev-build": "webpack --watch --config webpack.development.config.js",
     "prod-build": "webpack --config webpack.production.config.js",
     "server:dev": "./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline",
+    "server:prod": "./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline",
     "test": "mocha --require babel-core/register"
   },
   "keywords": [],
