@@ -1,6 +1,6 @@
 # webpack
-モージュールバンドラーwebpackで、ワンランク上の開発ライフ。
-コードをモジュール化するから、テストも快適！
+モージュールバンドラーwebpackで、ワンランク上のアプリ開発。  
+コードをモジュール化するから、ソースの見通しがスッキリ。テストも快適！
 
 ## 内容
 * JSのES6表記を、babelでトランスパイル
@@ -21,24 +21,16 @@
 ### 開発ビルド
 * ```npm run dev-build```（webpack --watch --config webpack.development.config.jsを実行。watchオプションでファイルが更新されたら自動ビルド）
 * /public/js配下にビルドされたbundle.jsが生成されます。
-* デバッグ用のソースマップが生成される。
+* デバッグ用のソースマップが生成されます。
 
 ### 開発サーバー起動
 * ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline）
-* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ）
+* ファイルが更新されたらLiveReloadします。（サーバー上で、bundle.jsが生成される。ファイルは生成されない）
 * URLは、http://localhost:8080/
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
-* ソースファイルが、/public/js配下に、ミニファイされて出力されます。(bundle.js)
-
-### 本番サーバー起動
-* ```npm run server:prod```（./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline）
-* ファイルが更新されたら自動ビルド（```npm run prod-build```が実行される）
-
-### 注意点
-* 開発サーバーを起動しているときに、本番ビルドしてブラウザからbundle.jsを見ても、本番用のソースは表示されない。（開発用のため）  
-エディタで開いて確認できる。
+* ソースファイルが、/public/js配下に、minifyされてbundle.jsを出力します。
 
 
 ### テスト
