@@ -25,20 +25,12 @@
 
 ### 開発サーバー起動
 * ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline）
-* ファイルが更新されたらLiveReloadする（```npm run dev-build```が走っているのと同じような状態。bundle.jsは生成されない）
+* ファイルが更新されたらLiveReloadします。（サーバー上で、bundle.jsが生成される。ファイルは生成されない）
 * URLは、http://localhost:8080/
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
-* ソースファイルが、/public/js配下に、minifyされてbundle.jsを出力。
-
-### 本番サーバー起動
-* ```npm run server:prod```（./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline）
-* ファイルが更新されたらLiveReloadする（```npm run prod-build```が走っているのと同じような状態。bundle.jsは生成されない）
-
-### 注意点
-* 開発サーバーを起動しているときに、本番ビルドしてブラウザからbundle.jsを見ても、本番用のソースは表示されない。（開発用のため）  
-エディタで開いて確認できる。
+* ソースファイルが、/public/js配下に、minifyされてbundle.jsを出力します。
 
 
 ### テスト
