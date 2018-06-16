@@ -21,16 +21,16 @@
 ### 開発ビルド
 * ```npm run dev-build```（webpack --watch --config webpack.development.config.jsを実行。watchオプションでファイルが更新されたら自動ビルド）
 * /public/js配下にビルドされたbundle.jsが生成されます。
-* デバッグ用のソースマップが生成される。
+* デバッグ用のソースマップが生成されます。
 
 ### 開発サーバー起動
 * ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline）
-* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ）
+* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ。bundle.jsは生成されない）
 * URLは、http://localhost:8080/
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
-* ソースファイルが、/public/js配下に、ミニファイされて出力されます。(bundle.js)
+* ソースファイルが、/public/js配下に、minifyされてbundle.jsを出力。
 
 ### 本番サーバー起動
 * ```npm run server:prod```（./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline）
