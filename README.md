@@ -11,22 +11,26 @@
 ## 使い方
 ### インストール
 * 管理者権限でGit Bash起動
-* npm install
+* ```npm install```
 
 ### ソースの配置
 * /src/js配下に開発コードを配置。app.jsがアプリ本体。
 * /src/js/modules配下に、モジュール化したソースを配置
 
-### ビルド
-* npm run build（webpackを実行）
-* /public/js配下にビルドされたbundle.jsが生成されます。
-
 ### サーバー起動
-* npm run server（./node_modules/.bin/webpack-dev-server --hot --inline）
+* ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --hot --inline）
 * URLは、http://localhost:8080/
 
+### 開発ビルド
+* ```npm run dev-build```（webpack --watch --config webpack.development.config.jsを実行）
+* /public/js配下にビルドされたbundle.jsが生成されます。
+
+### 本番ビルド
+* ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
+* /src/js/配下のソースファイルが、/public/js配下に結合＋ミニファイされて出力されます。(bundle.js)
+
 ### テスト
-* npm run test（mocha --require babel-core/register）
+* ```npm run test```（mocha --require babel-core/register）
 * /test配下のテストコードを実行します。以下のようなES6表記もOK。
 
     ```import assert from "assert";
@@ -46,10 +50,6 @@
 https://mochajs.org/  
 * power assertについて  
 https://github.com/power-assert-js/power-assert  
-
-### 本番環境にアップするときは、
-* webpack.config.jsの6行目 mode: 'development',を'production'に書き換える
-* /src/js/配下のソースファイルが、/public/js配下に結合＋ミニファイされて出力されます。(bundle.js)
 
 ## 参考URL
 http://system.blog.uuum.jp/entry/2016/09/16/110000  
