@@ -20,7 +20,7 @@
     │  webpack.production.config.js（webpackの本番用ビルド設定）
     │
     ├─public
-    │  │  index.html（開発サーバーのインデックス）
+    │  │  index.html（アプリのインデックス）
     │  │
     │  └─js
     │     bundle.js（ビルドファイル）
