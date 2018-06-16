@@ -46,9 +46,18 @@
         });
     });
 
-* mochaについて  
+## 使用ツール
+* webpack  
+https://webpack.js.org/  
+* babel-core  
+https://www.npmjs.com/package/babel-core  
+* webpack-dev-server  
+https://github.com/webpack/webpack-dev-server
+* uglifyjs-webpack-plugin
+https://github.com/webpack-contrib/uglifyjs-webpack-plugin
+* mocha  
 https://mochajs.org/  
-* power assertについて  
+* power assert  
 https://github.com/power-assert-js/power-assert  
 
 ## 参考URL
