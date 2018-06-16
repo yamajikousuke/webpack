@@ -2,11 +2,11 @@
 モージュールバンドラーwebpackでワンランク上の開発ライフ。
 
 ## 内容
-* ES6表記をbabelでトランスパイル
-* 開発用サーバーwebpack-dev-server（LiveReloadします）
+* JSのES6表記をbabelでトランスパイル
+* 開発用サーバーは、webpack-dev-serverです。（LiveReloadします）
 * テスティングフレームワークは、mocha
 * アサーションは、power assert
-* デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
+なお、デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
 
 ## 使い方
 ### インストール
@@ -14,7 +14,7 @@
 * ```npm install```を実行してください。
 
 ### ソースの配置
-* /src/js配下に開発コードを配置。app.jsがアプリ本体。
+* /src/js配下に開発コードを配置。app.jsがアプリ本体（エントリーポイント）。
 * /src/js/modules配下に、モジュール化したソースを配置
 
 ### 開発サーバー起動
@@ -27,7 +27,7 @@
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
-* ソースファイルが、/public/js配下に結合＋ミニファイされて出力されます。(bundle.js)
+* ソースファイルが、/public/js配下に、ミニファイされて出力されます。(bundle.js)
 
 ### テスト
 * ```npm run test```（mocha --require babel-core/register）
