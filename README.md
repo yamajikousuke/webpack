@@ -18,17 +18,28 @@
 * /src/js配下に開発コードを配置。app.jsがアプリ本体（エントリーポイント）。
 * /src/js/modules配下に、モジュール化したソースを配置
 
+### 開発ビルド
+* ```npm run dev-build```（webpack --watch --config webpack.development.config.jsを実行。watchオプションでファイルが更新されたら自動ビルド）
+* /public/js配下にビルドされたbundle.jsが生成されます。
+* デバッグ用のソースマップが生成される。
+
 ### 開発サーバー起動
 * ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline）
+* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ）
 * URLは、http://localhost:8080/
-
-### 開発ビルド
-* ```npm run dev-build```（webpack --watch --config webpack.development.config.jsを実行。watchオプションでファイル変更されたら自動ビルド）
-* /public/js配下にビルドされたbundle.jsが生成されます。
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
 * ソースファイルが、/public/js配下に、ミニファイされて出力されます。(bundle.js)
+
+### 本番サーバー起動
+* ```npm run server:prod```（./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline）
+* ファイルが更新されたら自動ビルド（```npm run prod-build```が実行される）
+
+### 注意点
+* 開発サーバーを起動しているときに、本番ビルドしてブラウザからbundle.jsを見ても、本番用のソースは表示されない。（開発用のため）  
+エディタで開いて確認できる。
+
 
 ### テスト
 * ```npm run test```（mocha --require babel-core/register）
