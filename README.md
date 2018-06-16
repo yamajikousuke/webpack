@@ -56,7 +56,7 @@
 
 ### 本番ビルド
 * ```npm run prod-build```（webpack --config webpack.production.config.jsを実行）
-* ソースファイルが、/public/js配下に、minifyされてbundle.jsを出力します。
+* ソースファイルが、/public/js配下に、minifyされたbundle.jsを出力します。
 
 
 ### テスト
