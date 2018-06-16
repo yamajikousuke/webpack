@@ -5,7 +5,7 @@
 * JSのES6表記をbabelでトランスパイル
 * 開発用サーバーは、webpack-dev-serverです。（LiveReloadします）
 * テスティングフレームワークは、mocha
-* アサーションは、power assert
+* アサーションは、power assert  
 なお、デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
 
 ## 使い方
