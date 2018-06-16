@@ -1,8 +1,10 @@
 // output.pathに絶対パスを指定する必要があるため、pathモジュールを読み込んでおく
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   // モードの設定、v4系以降はmodeを指定しないと、webpack実行時に警告が出る
+  // 開発：development 本番：production
   mode: 'development',
   // エントリーポイントの設定
   entry: './src/js/app.js',
@@ -22,7 +24,7 @@ module.exports = {
   },
   //ソースマップ
   //開発環境ではcheap-module-eval-source-map、本番環境ではcheap-module-source-map
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   // ローダーの設定
   module: {
     rules: [
@@ -46,4 +48,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        output: {
+            comments: false
+        }
+      }
+    })
+  ]
 };

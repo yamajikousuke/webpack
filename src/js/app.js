@@ -2,8 +2,8 @@ import $ from 'jquery';
 import additionCalculator from './modules/addition-calculator';
 import taxCalculator from './modules/tax-calculator';
 
-const item1Price = 600;
-const item2Price = 500;
+const item1Price = 500;
+const item2Price = 600;
 const totalPrice = additionCalculator(item1Price, item2Price);
 const tax = 1.08;
 const priceIncludeTax = taxCalculator(totalPrice, tax);
