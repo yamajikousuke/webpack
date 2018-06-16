@@ -11,6 +11,5 @@ http://localhost:8080/
 ./node_modules/.bin/webpack-dev-server --hot --inline --content-base public/
  
 
-
 test
 mocha --require babel-core/register
