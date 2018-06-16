@@ -10,8 +10,8 @@
 なお、デフォルトでは、jQueryが入っています。必要ない場合は、package.jsonから削除してinstallして下さい。
 
 ## 使い方
-
-    ```/
+### ファイル構成
+    /
     │  .babelrc（babel設定ファイル）
     │  .gitignore（Gitの設定ファイル）
     │  package.json（NodeJSの設定ファイル）
@@ -23,7 +23,7 @@
     │  │  index.html（開発サーバーのインデックス）
     │  │
     │  └─js
-    │          bundle.js（ビルドファイル）
+    │     bundle.js（ビルドファイル）
     │
     ├─src
     │  └─js
