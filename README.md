@@ -24,8 +24,8 @@
 * デバッグ用のソースマップが生成される。
 
 ### 開発サーバー起動
-* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ）
 * ```npm run server:dev```（./node_modules/.bin/webpack-dev-server --config webpack.development.config.js --hot --inline）
+* ファイルが更新されたら自動ビルド（```npm run dev-build```が走っているのと状態と同じ）
 * URLは、http://localhost:8080/
 
 ### 本番ビルド
@@ -33,8 +33,8 @@
 * ソースファイルが、/public/js配下に、ミニファイされて出力されます。(bundle.js)
 
 ### 本番サーバー起動
-* ファイルが更新されたら自動ビルド（```npm run prod-build```が実行される）
 * ```npm run server:prod```（./node_modules/.bin/webpack-dev-server --config webpack.production.config.js --hot --inline）
+* ファイルが更新されたら自動ビルド（```npm run prod-build```が実行される）
 
 ### 注意点
 * 開発サーバーを起動しているときに、本番ビルドしてブラウザからbundle.jsを見ても、本番用のソースは表示されない。（開発用のため）  
